@@ -1,0 +1,17 @@
+html.dark .prose.dark-prose-fix {
+  color: #e5e7eb;
+}
+html.dark .prose.dark-prose-fix h1,
+html.dark .prose.dark-prose-fix h2,
+html.dark .prose.dark-prose-fix h3,
+html.dark .prose.dark-prose-fix h4,
+html.dark .prose.dark-prose-fix h5,
+html.dark .prose.dark-prose-fix h6,
+html.dark .prose.dark-prose-fix p,
+html.dark .prose.dark-prose-fix li,
+html.dark .prose.dark-prose-fix strong,
+html.dark .prose.dark-prose-fix span,
+html.dark .prose.dark-prose-fix ul,
+html.dark .prose.dark-prose-fix ol {
+  color: #e5e7eb !important;
+}
