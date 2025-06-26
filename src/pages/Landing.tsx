@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  ArrowRight, 
   Shield, 
   Zap, 
   Users, 
@@ -61,47 +60,6 @@ const LandingPage: React.FC = () => {
       role: "Desarrollador Senior",
       content: "La mejor experiencia de usuario que he visto. Rápida, segura y confiable.",
       rating: 5
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Básico",
-      price: "$9",
-      period: "/mes",
-      features: [
-        "Hasta 5 proyectos",
-        "Almacenamiento 1GB",
-        "Soporte por email",
-        "Acceso básico"
-      ],
-      popular: false
-    },
-    {
-      name: "Pro",
-      price: "$29",
-      period: "/mes",
-      features: [
-        "Proyectos ilimitados",
-        "Almacenamiento 50GB",
-        "Soporte prioritario",
-        "Integraciones avanzadas",
-        "Analytics detallados"
-      ],
-      popular: true
-    },
-    {
-      name: "Empresa",
-      price: "$99",
-      period: "/mes",
-      features: [
-        "Todo lo de Pro",
-        "Almacenamiento 500GB",
-        "Soporte 24/7",
-        "API personalizada",
-        "Seguridad enterprise"
-      ],
-      popular: false
     }
   ];
 

@@ -6,7 +6,7 @@ import Loading from '../components/common/Loading';
 import PrivateLayout from '../layouts/PrivateLayout';
 
 const Dashboard: React.FC = () => {
-  const { user, logout, loading, isAuthenticated } = useAuth();
+  const { loading, isAuthenticated } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {

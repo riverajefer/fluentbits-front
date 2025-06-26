@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import { Button } from '../components/ui/Button';
 import { addWordOrSentence } from '../services/words';
-import { Link } from 'react-router-dom';
-import { Menu, X, Moon, Sun } from 'lucide-react';
 
 const AddWord: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>(
+  const [theme] = useState<'light' | 'dark'>(
     window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
   );
 
@@ -17,11 +14,6 @@ const AddWord: React.FC = () => {
       document.documentElement.classList.remove('dark');
     }
   }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
-  };
-
 
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);

@@ -11,7 +11,7 @@ interface PrivateLayoutProps {
   children: React.ReactNode;
 }
 
-const PrivateLayout: React.FC<PrivateLayoutProps> = ({ title, children }) => {
+const PrivateLayout: React.FC<PrivateLayoutProps> = ({ children }) => {
   const { user, logout } = useAuth();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [theme, setTheme] = React.useState<'light' | 'dark'>(
