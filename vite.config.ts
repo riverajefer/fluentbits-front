@@ -4,5 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  // Configuración para despliegue en GitHub Pages
   base: '/fluentbits-front/',
+  // base: '/fluentbits-front/',
 })
