@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   // Configuración para despliegue en GitHub Pages
-  base: '/fluentbits-front/',
+  base: '',
   // base: '/fluentbits-front/',
+  
 })
