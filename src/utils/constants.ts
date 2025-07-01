@@ -8,8 +8,8 @@ export const STORAGE_KEYS = {
 
 export const ROUTES = {
   HOME: '/',
-  LOGIN: '/api/auth/login',
-  REGISTER: '/api/auth/register',
-  DASHBOARD: '/api/dashboard',
-  PROFILE: '/api/profile',
+  LOGIN: '/auth/login',
+  REGISTER: '/auth/register',
+  DASHBOARD: '/dashboard',
+  PROFILE: '/profile',
 } as const;

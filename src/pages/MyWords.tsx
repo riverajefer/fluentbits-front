@@ -91,7 +91,7 @@ const MyWords: React.FC = () => {
                         <td className="px-4 py-2 font-medium text-gray-900 dark:text-gray-100">{item.Word}</td>
                         <td className="px-4 py-2 text-gray-700 dark:text-gray-300">{new Date(item.CreatedAt).toLocaleDateString()}</td>
                         <td className="px-4 py-2">
-                          <a href={`/my-words/${item.ID}`} className="text-blue-600 hover:underline">Ver repeticiones</a>
+                          <a href={`my-words/${item.ID}`} className="text-blue-600 hover:underline">Ver repeticiones</a>
                         </td>
                       </tr>
                     ))}

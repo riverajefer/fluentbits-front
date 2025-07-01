@@ -29,8 +29,8 @@ const MyWordsDetail: React.FC = () => {
       try {
         const data = await getSpacedRepetitionsByWordId(id!);
         setRepetitions(data);
-      } catch (err) {
-        setError('Error al cargar las repeticiones');
+      } catch (err: any) {
+        setError(err.message || 'Error al cargar las repeticiones');
       } finally {
         setLoading(false);
       }
@@ -40,21 +40,37 @@ const MyWordsDetail: React.FC = () => {
 
   return (
     <PrivateLayout>
-      <div className="max-w-3xl mx-auto p-4">
-        <Link to="/my-words" className="text-blue-600 hover:underline mb-4 inline-block">&larr; Volver a Mis palabras</Link>
-        <h1 className="text-2xl font-bold mb-4 prose dark:prose-invert dark-prose-fix">Historial de repeticiones</h1>
+      <div className='max-w-3xl mx-auto p-4'>
+        <Link
+          to='/my-words'
+          className='text-blue-600 hover:underline mb-4 inline-block'
+        >
+          &larr; Volver a Mis palabras
+        </Link>
+        <h1 className='text-2xl font-bold mb-4 prose dark:prose-invert dark-prose-fix'>
+          Historial de repeticiones
+        </h1>
         {loading && <div>Cargando...</div>}
-        {error && <div className="text-red-500">{error}</div>}
-        <div className="space-y-6">
-          {repetitions.map(rep => (
-            <div key={rep.ID} className="border rounded-lg p-4 bg-white dark:bg-gray-800 shadow">
-              <div className="text-xs text-gray-500 mb-2">
-                Día de repetición: {rep.RepetitionNumber} | Fecha objetivo: {new Date(rep.TargetDate).toLocaleDateString()}
+        {error && <div className='text-red-500'>{error}</div>}
+        <div className='space-y-6'>
+          {repetitions.map((rep) => (
+            <div
+              key={rep.ID}
+              className='border rounded-lg p-4 bg-white dark:bg-gray-800 shadow'
+            >
+              <div className='text-xs text-gray-500 mb-2'>
+                Día de repetición: {rep.RepetitionNumber} | Fecha objetivo:{' '}
+                {new Date(rep.TargetDate).toLocaleDateString()}
               </div>
-              <div dangerouslySetInnerHTML={{ __html: rep.AIResponse }} className="prose dark:prose-invert dark-prose-fix" />
+              <div
+                dangerouslySetInnerHTML={{ __html: rep.AIResponse }}
+                className='prose dark:prose-invert dark-prose-fix'
+              />
             </div>
           ))}
-          {(!loading && repetitions.length === 0) && <div>No hay repeticiones para esta palabra.</div>}
+          {!loading && repetitions.length === 0 && (
+            <div>No hay repeticiones para esta palabra.</div>
+          )}
         </div>
       </div>
     </PrivateLayout>

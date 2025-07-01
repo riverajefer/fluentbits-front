@@ -36,7 +36,7 @@ const PublicRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
 function App() {
   return (
-    <Router basename="">
+    <Router basename="/fluentbits-front">
       <div className="App">
         <Routes>
           {/* Rutas públicas */}
