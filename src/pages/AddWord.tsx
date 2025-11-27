@@ -76,12 +76,12 @@ const AddWord: React.FC = () => {
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 {mode === 'english' ? 'Palabra en Inglés' : 'Tema o Concepto'}
               </label>
-              <input
-                type="text"
+              <textarea
                 value={input}
                 onChange={e => setInput(e.target.value)}
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 resize-vertical"
                 placeholder={mode === 'english' ? "Ej: Algorithm" : "Ej: Patrones de Diseño"}
+                rows={4}
                 required
               />
             </div>
