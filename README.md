@@ -295,7 +295,7 @@ Este proyecto es privado y está protegido por derechos de autor.
 - [React Team](https://react.dev/) - Por el increíble framework
 - [Vite Team](https://vite.dev/) - Por la herramienta de build ultrarrápida
 - [Tailwind Labs](https://tailwindcss.com/) - Por el framework de CSS utility-first
-- Comunidad open source - Por todas las librerías utilizadas
+- Comunidad open source - Por todas las librerías utilizadas.
 
 ---
 
