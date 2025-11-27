@@ -34,6 +34,8 @@ jobs:
 
       - name: Build project
         run: npm run build
+        env:
+          VITE_API_BASE_URL: https://ptetime.com/
 
       - name: Configure Git
         run: |
