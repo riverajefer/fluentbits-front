@@ -29,6 +29,7 @@ const AddWord: React.FC = () => {
     try {
       const data = await addWordOrSentence(input, mode);
       setResult(data.result || '¡Contenido enviado con éxito!');
+      setInput('');
     } catch (err: any) {
       setError(err.message || 'Ocurrió un error inesperado.');
     } finally {
